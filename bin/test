@@ -7,4 +7,4 @@ if test -f "$DIR/node_modules/.bin/mocha"; then
 else
   MOCHA="mocha"
 fi
-"$MOCHA" --recursive "$DIR/test" || exit 1
+"$MOCHA" --recursive --compilers js:babel-register "$DIR/test" || exit 1

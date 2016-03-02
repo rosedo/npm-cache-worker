@@ -115,20 +115,3 @@ function new_(mainOptions) {
         }, callback);
     }
 }
-
-// function todoMethod(options) {
-//     options = _.clone(options || {});
-//     _.defaultsDeep(options, mainOptions);
-//     requireOptions(options, [
-//         'logger',
-//     ]);
-//     return Promise.resolve();
-// }
-
-// function requireOptions(providedOptions, requiredOptionNames) {
-//     requiredOptionNames.forEach(function(optionName) {
-//         if (typeof providedOptions[optionName] === 'undefined') {
-//             throw new Error('missing option: ' + optionName);
-//         }
-//     });
-// }
