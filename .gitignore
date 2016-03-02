@@ -8,6 +8,7 @@
 
 # Sublime Text
 /*.sublime-workspace
+/.testview.js
 
 # OS X
 .DS_Store

@@ -5,8 +5,8 @@
     "type": "git",
     "url": "https://github.com/rosedo/npm-cache-worker.git"
   },
-  "version": "0.0.1",
-  "description": "TODO description",
+  "version": "1.0.0",
+  "description": "Add promise workers to cache values in memory, retrieve synchronously",
   "scripts": {
     "prepublish": "bin/prepublish",
     "test": "bin/build && bin/test && bin/lint"
@@ -14,7 +14,9 @@
   "author": "Dominic Rose",
   "license": "ISC",
   "dependencies": {
-    "lodash": ">= 4.5.1"
+    "async": "^1.5.2",
+    "lodash": ">= 4.5.1",
+    "memory-cache": ">= 0.1.4"
   },
   "devDependencies": {
     "babel-cli": ">= 6.5.1",
