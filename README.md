@@ -107,6 +107,25 @@ Functions from memory-cache: <https://github.com/ptarjan/node-cache>
 
 Waits values to be cached before calling the callback. Keys can be a string array or a string (defaults to all keys)
 
+### Caching outside of memory
+```js
+const cache = require('cache-worker');
+cache.addHandler('example3', callback => {
+    // this will be called every day
+    collectData()
+    .then(updateDatabase)
+    .then(function() {
+        callback(null, true, 24 * 60 * 60000);
+    })
+    .catch(function() {
+        setTimeout(function() {
+            cache.put('example3', null);
+        }, 5 * 60000);
+    });
+});
+cache.start();
+```
+
 ## Running tests
 ```sh
 $ npm install
